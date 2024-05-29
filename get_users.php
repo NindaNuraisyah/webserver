@@ -1,6 +1,6 @@
 <?php
 include 'db_config.php';
-$sql = "SELECT id, name, email FROM users";
+$sql = "SELECT id, name, email, nim, nohp, alamat FROM users";
 $result = $koneksi->query($sql);
 $users = array();
 if ($result->num_rows > 0) {
