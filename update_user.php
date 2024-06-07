@@ -3,10 +3,8 @@ header("Content-Type: application/json");
 
 include 'db_config.php';
 
-// Get the posted data
 $data = json_decode(file_get_contents("php://input"));
 
-// Validate the data
 if (!isset($data->id) || !isset($data->name) || !isset($data->email) || !isset($data->nim) || !isset($data->nohp) || !isset($data->alamat)) {
     die(json_encode(["error" => "Invalid input"]));
 }
